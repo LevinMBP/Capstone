@@ -8,7 +8,7 @@ NoteMaster is an app design to enhance your productivity and help you stay organ
 * Joseph Piquero(0963845)
 
 # Features
-* User able to create an account
+* User can create an account
 * User can login
 * User can add and view note
 * User can edit and delete note
@@ -21,7 +21,6 @@ NoteMaster is an app design to enhance your productivity and help you stay organ
 * User can share notes
 * User can upload image in the note
 * App displays an animated splash screen
-<!-- * User can also create a schedule -->
 * User can export their notes (PDF, Plain Text)
 * User can password protect their notes
 * User can import note
