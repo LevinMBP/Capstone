@@ -13,14 +13,14 @@ NoteMaster is an app design to enhance your productivity and help you stay organ
 * User can add and view note
 * User can edit and delete note
 * User can delete all notes
-* App provides text formatting (bold, italics, and underline)
+* User have a text formatting (bold, italics, and underline)
 * User can use folders, tags, colors or category to organize notes
 * User can search through the app
 * User can filter or sort note
 * User can retrieve deleted note/s from trash
 * User can share notes
 * User can upload image in the note
-* App displays an animated splash screen
+* User have an animated splash screen
 * User can export their notes (PDF, Plain Text)
 * User can password protect their notes
 * User can import note
