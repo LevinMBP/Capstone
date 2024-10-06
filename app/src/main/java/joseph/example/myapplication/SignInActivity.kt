@@ -39,7 +39,14 @@ class SignInActivity : AppCompatActivity() {
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
                     } else {
-                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                        val exception = it.exception
+                        if (exception != null) {
+                            val errMessage = exception.localizedMessage ?: "An unknown error occurred."
+                            Toast.makeText(this, errMessage, Toast.LENGTH_SHORT).show()
+                        }
+                        else {
+                            Toast.makeText(this, "Unknown error occurred.", Toast.LENGTH_SHORT)                                    .show()
+                        }
                     }
                 }
 
