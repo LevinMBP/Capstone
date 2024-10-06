@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "98741862403",
+    "project_id": "capstone-notemaster",
+    "storage_bucket": "capstone-notemaster.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98741862403:android:5eb2e3dd492901cc430e36",
+        "android_client_info": {
+          "package_name": "joseph.example.notemaster"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfYePmUSvt4xBo6xVU2bBie_MH4Z48ues"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
