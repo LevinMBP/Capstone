@@ -25,6 +25,7 @@ class SignInActivity : AppCompatActivity() {
         binding.signupText.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
+
         }
 
         binding.button.setOnClickListener {
