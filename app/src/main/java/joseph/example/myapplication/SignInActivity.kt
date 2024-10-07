@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 import joseph.example.myapplication.databinding.ActivitySignInBinding
+import joseph.example.myapplication.general.HomeActivity
 
 class SignInActivity : AppCompatActivity() {
 
@@ -36,7 +37,7 @@ class SignInActivity : AppCompatActivity() {
 
                 firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        val intent = Intent(this, MainActivity::class.java)
+                        val intent = Intent(this, HomeActivity::class.java)
                         startActivity(intent)
                     } else {
                         val exception = it.exception
