@@ -37,6 +37,32 @@
         <activity android:name=".general.HomeActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity android:name=".general.ClassMatesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity android:name=".general.ClassNotesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity android:name=".general.AboutActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity android:name=".general.ReminderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity android:name=".general.StudentProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity android:name=".general.UploadFilesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+
     </application>
 
 

@@ -42,6 +42,40 @@
     <string name="forgot_password1">Forgot Password</string>
     <string name="by_clicking_submit_button_you_will_receive_an_email_to_reset_your_password">By Clicking Submit Button, you will receive an Email to reset your Password</string>
     <string name="enter_your_registered_email_id">Enter your Registered Email ID</string>
+    <string name="search_class_notes_here">Search Class Notes Here</string>
+    <string name="stumate_news">NewsMaster News</string>
+
+    <string name="admob_app_id">ca-app-pub-2425059000755769~9451688304</string>
+    <string name="admob_banner_id">ca-app-pub-2425059000755769/4087680989</string>
+    <string name="admob_large_banner">ca-app-pub-2425059000755769/5578718442</string>
+    <string name="new_version_is_live">New version is live now</string>
+    <string name="new_ui_and_added_facility_to_set_timely_reminders_for_assignments">New UI and added facility to set timely reminders for assignments</string>
+    <string name="reminders">Reminders</string>
+    <string name="are_you_sure_you_want_to_logout">Are you sure you want to logout?</string>
+    <string name="back">Back</string>
+
+    <string name="sampling_distribution_notes">Sampling Distribution Notes</string>
+    <string name="tprobability_and_statistics_t">\tProbability and Statistics\t</string>
+    <string name="tunit_1_t_t">\tUnit-1\t\t</string>
+    <string name="posted_by_krutik_bhatt_5_minutes_ago">Posted by Krutik Bhatt 5 minutes ago</string>
+    <string name="delete_file">Delete File</string>
+    <string name="are_you_sure_you_want_to_delete_file">Are you sure you want to delete file?</string>
+    <string name="upload_notes_or_question_papers">Upload Notes or Question Papers</string>
+    <string name="upload_file">upload file</string>
+    <string name="enter_subject_name">Enter Subject Name</string>
+    <string name="choose_unit_number">Choose Unit Number</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="t_tother_files_t_t">\t\tOther Files\t\t</string>
+    <string name="choose_file_type">Choose File Type</string>
+    <string name="timage_t">\tIMAGE\t</string>
+    <string name="tpdf_t">\tPDF\t</string>
+    <string name="tdoc_t">\tDOC\t</string>
+    <string name="tppt_t">\tPPT\t</string>
+    <string name="t_t_tpublish_file_t_t_t">\t\t\tPublish File\t\t\t</string>
+    <string name="file_published_successfully_to_your_class_group">File published successfully to your class group</string>
 
 
 </resources>
