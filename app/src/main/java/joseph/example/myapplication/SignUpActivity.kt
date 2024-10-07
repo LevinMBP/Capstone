@@ -2,6 +2,7 @@ package joseph.example.myapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -25,6 +26,7 @@ class SignUpActivity : AppCompatActivity() {
         binding.singinText.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
+
         }
 
         binding.button.setOnClickListener {
@@ -40,7 +42,14 @@ class SignUpActivity : AppCompatActivity() {
                             startActivity(intent)
                         }
                         else {
-                            Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                            val exception = it.exception
+                            if (exception != null) {
+                                val errMessage = exception.localizedMessage ?: "An unknown error occurred."
+                                Toast.makeText(this, errMessage, Toast.LENGTH_SHORT).show()
+                            }
+                            else {
+                                Toast.makeText(this, "Unknown error occurred.", Toast.LENGTH_SHORT)                                    .show()
+                            }
                         }
                     }
                 }
