@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "98741862403",
-    "project_id": "capstone-notemaster",
-    "storage_bucket": "capstone-notemaster.appspot.com"
+    "project_number": "868255284031",
+    "project_id": "capstone-project-c24b6",
+    "storage_bucket": "capstone-project-c24b6.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:98741862403:android:06be69ffaa9ad2c6430e36",
+        "mobilesdk_app_id": "1:868255284031:android:04391f2b4da5de7a37b18a",
         "android_client_info": {
           "package_name": "joseph.example.myapplication"
         }
@@ -15,26 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDfYePmUSvt4xBo6xVU2bBie_MH4Z48ues"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:98741862403:android:5eb2e3dd492901cc430e36",
-        "android_client_info": {
-          "package_name": "joseph.example.notemaster"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDfYePmUSvt4xBo6xVU2bBie_MH4Z48ues"
+          "current_key": "AIzaSyBKHF6g67GMqk0SHdl-uQ-V6o9E0OHSShc"
         }
       ],
       "services": {
