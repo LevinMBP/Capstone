@@ -21,6 +21,7 @@
             android:background="@drawable/light_purple_background_half_circle"
             android:padding="60dp">
 
+
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"

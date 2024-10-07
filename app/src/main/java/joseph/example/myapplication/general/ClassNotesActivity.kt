@@ -36,10 +36,6 @@ class ClassNotesActivity : AppCompatActivity() {
     private lateinit var classNotesAdapter: ClassNotesAdapter
     private lateinit var binding: ActivityClassNotesBinding
 
-   // lateinit var mGoogleSignInClient: GoogleSignInClient
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

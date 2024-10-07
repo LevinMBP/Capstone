@@ -17,6 +17,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.FirebaseApp
+import com.google.firebase.auth.FirebaseAuth
 import joseph.example.myapplication.R
 import joseph.example.myapplication.SignInActivity
 import joseph.example.myapplication.adapters.DashboardIconsAdapter
@@ -26,7 +28,7 @@ import joseph.example.myapplication.modals.NewsData
 import joseph.example.myapplication.utils.AppPreferences
 
 class HomeActivity: AppCompatActivity() {
-
+    private lateinit var auth: FirebaseAuth
     private lateinit var linearLayoutManager: LinearLayoutManager
     private lateinit var newsLayoutManager: LinearLayoutManager
     lateinit var bottomnav: BottomAppBar
@@ -39,6 +41,8 @@ class HomeActivity: AppCompatActivity() {
     @SuppressLint("SetTextI18n", "InflateParams")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        FirebaseApp.initializeApp(this)
+        auth = FirebaseAuth.getInstance()
         setContentView(R.layout.activity_home)
         val studentName = findViewById<TextView>(R.id.studentName)
         val uploadFilesButton = findViewById<FloatingActionButton>(R.id.uploadFilesButton)
@@ -48,6 +52,12 @@ class HomeActivity: AppCompatActivity() {
         val newsRecycler = findViewById<RecyclerView>(R.id.newsRecycler)
         bottomnav=findViewById(R.id.bottomnav)
         AppPreferences.init(this)
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            studentName.text = "Hi " + currentUser.email // Display the logged-in user's email
+        } else {
+            studentName.text = "Hi Guest" // Default message for guests
+        }
 
         // Google AdMob
         //We'll do it later
@@ -61,6 +71,7 @@ class HomeActivity: AppCompatActivity() {
             studentName.text = "Hi " + AppPreferences.studentName
         }
 
+
 //        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
 //            .requestIdToken(getString(R.string.default_web_client_id))
 //            .requestEmail()
@@ -70,10 +81,10 @@ class HomeActivity: AppCompatActivity() {
 //        mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
 
         uploadFilesButton.setOnClickListener {
-            //Redirect to UploadFilesActivity
-//            val intent = Intent(this, UploadFilesActivity::class.java)
-//            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
-//            startActivity(intent)
+//            ProcessBuilder.Redirect to UploadFilesActivity
+            val intent = Intent(this, UploadFilesActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            startActivity(intent)
         }
 
         notificationLayout.setOnClickListener {
@@ -224,40 +235,15 @@ class HomeActivity: AppCompatActivity() {
                 logoutDialog.setCancelable(false)
                 logoutDialog.setCanceledOnTouchOutside(false)
                 logoutDialog.window!!.setBackgroundDrawableResource(android.R.color.transparent)
-
                 logoutDialog.findViewById<Button>(R.id.btnLogout).setOnClickListener {
+                    auth.signOut()
                     AppPreferences.isLogin = false
                     AppPreferences.studentID = ""
                     AppPreferences.studentName = ""
                     val intent = Intent(this, SignInActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(intent)
                     finish()
-//                    //val account = GoogleSignIn.getLastSignedInAccount(this)
-//                    if (account != null) {
-//                        //Some one is already logged in
-//                        // Google sign out
-//                        // Google sign out
-//                        mGoogleSignInClient.signOut().addOnCompleteListener(this) {
-//                            // Logout the user from session
-//                            AppPreferences.isLogin = false
-//                            AppPreferences.studentID = ""
-//                            AppPreferences.studentName = ""
-//                            val intent = Intent(this, SignInActivity::class.java)
-//                            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
-//                            startActivity(intent)
-//                            finish()
-//                        }
-//                    } else {
-//                        // Logout the user from session
-//                        AppPreferences.isLogin = false
-//                        AppPreferences.studentID = ""
-//                        AppPreferences.studentName = ""
-//                        val intent = Intent(this, SignInActivity::class.java)
-//                        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
-//                        startActivity(intent)
-//                        finish()
-//                    }
                 }
 
                 logoutDialog.findViewById<Button>(R.id.btnCancel).setOnClickListener {

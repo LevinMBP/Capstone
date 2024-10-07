@@ -58,12 +58,15 @@ class SignInActivity : AppCompatActivity() {
 
     }
 
-    //    override fun onStart() {
-//        super.onStart()
-//
-//        if(firebaseAuth.currentUser != null) {
-//            val intent = Intent(this, MainActivity::class.java)
-//            startActivity(intent)
-//        }
-//    }
+    override fun onStart() {
+        super.onStart()
+
+        // Check if the user is already logged in
+        if (firebaseAuth.currentUser != null) {
+            // User is already signed in, redirect to HomeActivity
+            val intent = Intent(this, HomeActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+        }
+    }
 }

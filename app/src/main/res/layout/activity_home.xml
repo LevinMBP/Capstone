@@ -65,6 +65,7 @@
                     android:layout_below="@id/happyText"
                     android:layout_centerHorizontal="true"
                     android:layout_marginStart="20dp"
+                    android:autofillHints=""
                     android:focusableInTouchMode="false"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="20dp"
@@ -74,6 +75,7 @@
                     android:drawableStart="@drawable/ic_baseline_search_24"
                     android:drawablePadding="10dp"
                     android:hint="@string/search_class_notes_here"
+                    android:inputType=""
                     android:paddingStart="15dp"
                     android:paddingEnd="0dp" />
             </RelativeLayout>
@@ -93,9 +95,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/stumate_news"
+                android:text="@string/notemaster_news"
                 android:textStyle="bold"
-                android:id="@+id/stumateNews"
+                android:id="@+id/notemaster_news"
                 android:layout_below="@id/dashboardRecycler"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
@@ -110,7 +112,7 @@
                 android:layout_alignParentStart="true"
                 android:scrollbars="vertical"
                 android:layout_alignParentEnd="true"
-                android:layout_below="@id/stumateNews"
+                android:layout_below="@id/notemaster_news"
                 android:layout_marginTop="15dp"
                 android:id="@+id/newsRecycler" />
 
