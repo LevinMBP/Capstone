@@ -62,11 +62,15 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation ("com.google.firebase:firebase-database-ktx")
 
-    implementation ("com.google.firebase:firebase-storage-ktx")
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.database.ktx)
+    implementation("com.google.firebase:firebase-database-ktx")
+    implementation("com.google.firebase:firebase-storage-ktx")
+    implementation("com.google.firebase:firebase-messaging-ktx")
 
-    implementation ("com.google.firebase:firebase-messaging-ktx")
+
     // Google Ads
 //    implementation ("com.google.android.gms:play-services-ads:19.6.0")
 }
+apply(plugin = "com.google.gms.google-services")

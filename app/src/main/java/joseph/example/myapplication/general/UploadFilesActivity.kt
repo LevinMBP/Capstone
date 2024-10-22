@@ -26,6 +26,9 @@ import java.util.Date
 
 class UploadFilesActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUploadFilesBinding
+    var storage: FirebaseStorage = FirebaseStorage.getInstance()
+    var storageRef: StorageReference = storage.reference
+
 
     private lateinit var closeButton: ImageView
 
@@ -323,7 +326,7 @@ class UploadFilesActivity : AppCompatActivity() {
 
             binding.deleteIcon.visibility = View.VISIBLE
 
-            //upload()
+//            upload()
         }
     }
 
@@ -480,7 +483,15 @@ class UploadFilesActivity : AppCompatActivity() {
                 finish()
 
             }
+
         }
+        mReference.putFile(uri)
+            .addOnFailureListener { exception ->
+                Toast.makeText(this, "Failed to upload file: ${exception.message}", Toast.LENGTH_LONG).show()
+                Log.e(TAG, "Upload failed: ${exception.message}")
+            }
+
+
 
     }
 
