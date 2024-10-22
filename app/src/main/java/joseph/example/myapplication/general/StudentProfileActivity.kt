@@ -7,7 +7,13 @@ import joseph.example.myapplication.R
 class StudentProfileActivity:AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        //lateinit var mGoogleSignInClient: GoogleSignInClient
+
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_student_profile)
+
+
     }
 }
