@@ -231,6 +231,28 @@ class HomeActivity: AppCompatActivity() {
 
                 //  dialog.dismiss()
             }
+
+
+
+
+            view.findViewById<TextView>(R.id.collegeMates).setOnClickListener {
+                view.findViewById<TextView>(R.id.collegeMates).setBackgroundResource(R.drawable.bottom_sheet_dialog_button)
+                view.findViewById<TextView>(R.id.collegeMates).setTextColor(resources.getColor(R.color.colorPrimary))
+
+                val intent = Intent(this, ClassMatesActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+                startActivity(intent)
+
+                view.findViewById<TextView>(R.id.classNotes).setBackgroundResource(0)
+                view.findViewById<TextView>(R.id.profile).setBackgroundResource(0)
+                view.findViewById<TextView>(R.id.remainders).setBackgroundResource(0)
+                view.findViewById<TextView>(R.id.rateUs).setBackgroundResource(0)
+                view.findViewById<TextView>(R.id.logOut).setBackgroundResource(0)
+
+                //  dialog.dismiss()
+
+            }
+//Note: user can logout from the app and able to relogin ,basically redirected to login screen.
             view.findViewById<TextView>(R.id.logOut).setOnClickListener {
 
                 view.findViewById<TextView>(R.id.logOut).setBackgroundResource(R.drawable.bottom_sheet_dialog_button)
@@ -265,26 +287,6 @@ class HomeActivity: AppCompatActivity() {
                 view.findViewById<TextView>(R.id.logOut).setBackgroundResource(0)
 
                 //  dialog.dismiss()
-            }
-
-
-
-            view.findViewById<TextView>(R.id.collegeMates).setOnClickListener {
-                view.findViewById<TextView>(R.id.collegeMates).setBackgroundResource(R.drawable.bottom_sheet_dialog_button)
-                view.findViewById<TextView>(R.id.collegeMates).setTextColor(resources.getColor(R.color.colorPrimary))
-
-                val intent = Intent(this, ClassMatesActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
-                startActivity(intent)
-
-                view.findViewById<TextView>(R.id.classNotes).setBackgroundResource(0)
-                view.findViewById<TextView>(R.id.profile).setBackgroundResource(0)
-                view.findViewById<TextView>(R.id.remainders).setBackgroundResource(0)
-                view.findViewById<TextView>(R.id.rateUs).setBackgroundResource(0)
-                view.findViewById<TextView>(R.id.logOut).setBackgroundResource(0)
-
-                //  dialog.dismiss()
-
             }
 
 
