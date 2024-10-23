@@ -77,5 +77,10 @@
     <string name="t_t_tpublish_file_t_t_t">\t\t\tPublish File\t\t\t</string>
     <string name="file_published_successfully_to_your_class_group">File published successfully to your class group</string>
 
+    <string name="name_of_student">Name of Student</string>
+    <string name="_91_9381384234">+91 9381384234</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email_id">Email ID</string>
+    <string name="name_of_college">Name of College</string>
 
 </resources>

@@ -18,6 +18,8 @@ import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.FirebaseApp
+import com.google.firebase.appcheck.FirebaseAppCheck
+import com.google.firebase.appcheck.debug.DebugAppCheckProviderFactory
 import com.google.firebase.auth.FirebaseAuth
 import joseph.example.myapplication.R
 import joseph.example.myapplication.SignInActivity
@@ -58,6 +60,10 @@ class HomeActivity: AppCompatActivity() {
         } else {
             studentName.text = "Hi Guest" // Default message for guests
         }
+
+        // Initialize AppCheck
+        val firebaseAppCheck = FirebaseAppCheck.getInstance()
+        firebaseAppCheck.installAppCheckProviderFactory(DebugAppCheckProviderFactory.getInstance())
 
         // Google AdMob
         //We'll do it later

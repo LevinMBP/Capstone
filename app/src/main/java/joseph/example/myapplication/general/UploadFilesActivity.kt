@@ -59,8 +59,7 @@ class UploadFilesActivity : AppCompatActivity() {
 
         database = FirebaseDatabase.getInstance().reference
 
-        mStorage = FirebaseStorage.getInstance()
-            .getReference("123456")
+        mStorage = FirebaseStorage.getInstance().getReference("123456")
 
         binding.uploadFileButton.setOnClickListener {
 

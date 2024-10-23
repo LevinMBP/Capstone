@@ -315,7 +315,7 @@ class ClassNotesActivity : AppCompatActivity() {
 
     private fun retriveClassNotesData() {
 
-        val myRef = FirebaseDatabase.getInstance().reference.child(AppPreferences.studentID).child("files_data")
+        val myRef = FirebaseDatabase.getInstance().reference.child("123456").child("files_data")
         myRef.keepSynced(true)
 
         val classNotesListener = object :ValueEventListener{
