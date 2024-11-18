@@ -107,5 +107,17 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewForgotPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/dark_purple"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Forgot Password ?"
+            android:textAlignment="center"
+            android:padding="10dp"/>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

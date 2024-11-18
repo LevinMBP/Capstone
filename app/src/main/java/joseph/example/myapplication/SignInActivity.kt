@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 import joseph.example.myapplication.databinding.ActivitySignInBinding
+import joseph.example.myapplication.general.ForgotPasswordActivity
 import joseph.example.myapplication.general.HomeActivity
 
 class SignInActivity : AppCompatActivity() {
@@ -54,6 +55,11 @@ class SignInActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "All Fields are Required", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        binding.textViewForgotPassword.setOnClickListener {
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
+            startActivity(intent)
         }
 
     }
