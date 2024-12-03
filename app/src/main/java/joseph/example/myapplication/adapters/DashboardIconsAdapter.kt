@@ -9,9 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import joseph.example.myapplication.R
 import joseph.example.myapplication.general.ClassMatesActivity
@@ -20,13 +18,6 @@ import joseph.example.myapplication.general.ReminderActivity
 import joseph.example.myapplication.general.StudentProfileActivity
 import joseph.example.myapplication.modals.DashboardIconData
 
-import java.io.File
-import java.io.FileOutputStream
-import java.io.IOException
-import java.io.InputStream
-import java.net.HttpURLConnection
-import java.net.MalformedURLException
-import java.net.URL
 
 
 class DashboardIconsAdapter(private val iconsList: ArrayList<DashboardIconData>):
