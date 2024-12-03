@@ -14,5 +14,6 @@
     <color name="colorLightGrey">#51EBE9F8</color>
     <color name="colorGreen">#38c172</color>
     <color name="lightGrey">#D3D3D3</color>
+    <color name="hintColor">#9E9E9E</color>
 
 </resources>
